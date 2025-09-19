@@ -31,7 +31,7 @@ Problems found in the data:
 
 ## Files and folder
 - logs: directory for log files. A log file is created every time the pipeline in run and has it's timestamp in it's name.
-- manchester_property_sales: directory containing data cloned from [this GitHub repo]("https://github.com/MaxwellB13/manchester_property_sales/tree/master").
+- manchester_property_sales: directory containing data cloned from [The Manchester Property Sales Challenge repo]("https://github.com/MaxwellB13/manchester_property_sales/tree/master").
 - outputs: folder to store output of pipeline.
 - Manchester Property Sales Dashboard.pbix: PowerBi dashboard for general trend analysis and visualization.
 - Questions and analysis.ipynb: answers to questions in [The Manchester Property Sales Challenge README.md](https://github.com/MaxwellB13/manchester_property_sales/blob/master/README.md).
