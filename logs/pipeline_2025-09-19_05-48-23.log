@@ -1,0 +1,9 @@
+2025-09-19 05:48:23,820 - INFO - Loading data...
+2025-09-19 05:48:23,854 - INFO - Data loaded successfully
+2025-09-19 05:48:23,855 - INFO - Running pipeline ...
+2025-09-19 05:48:23,856 - ERROR - Pipeline failed: name 'clean_transform_postcode' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Adham\AppData\Local\Temp\ipykernel_16212\4138661591.py", line 50, in pipeline
+    *clean_transform_postcode(postcode_re),
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'clean_transform_postcode' is not defined

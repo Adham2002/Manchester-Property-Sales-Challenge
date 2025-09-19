@@ -1,0 +1,33 @@
+2025-09-19 04:17:48,236 - INFO - Loading data...
+2025-09-19 04:17:48,258 - INFO - Data loaded successfully
+2025-09-19 04:17:48,259 - INFO - Running pipeline ...
+2025-09-19 04:17:48,276 - ERROR - Pipeline failed: not yet implemented: Nested object types
+
+Hint: Try setting `strict=False` to allow passing data with mixed types.
+Traceback (most recent call last):
+  File "C:\Users\Adham\AppData\Local\Temp\ipykernel_16292\4055990389.py", line 49, in pipeline
+    pp_df.with_columns(
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\lazyframe\frame.py", line 5823, in with_columns
+    pyexprs = parse_into_list_of_expressions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\parse\expr.py", line 101, in parse_into_list_of_expressions
+    exprs = _parse_positional_inputs(inputs, structify=__structify)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\parse\expr.py", line 158, in _parse_positional_inputs
+    return [parse_into_expression(e, structify=structify) for e in inputs_iter]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\parse\expr.py", line 62, in parse_into_expression
+    expr = F.lit(input, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\functions\lit.py", line 174, in lit
+    pl.Series("literal", [value], dtype=dtype)._s,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\series\series.py", line 304, in __init__
+    self._s = sequence_to_pyseries(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\construction\series.py", line 264, in sequence_to_pyseries
+    return PySeries.new_from_any_values(name, values, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: not yet implemented: Nested object types
+
+Hint: Try setting `strict=False` to allow passing data with mixed types.

@@ -1,0 +1,26 @@
+2025-09-18 16:44:17,288 - INFO - Pipeline started
+2025-09-18 16:44:17,293 - INFO - Loading data...
+2025-09-18 16:44:17,352 - ERROR - Pipeline failed: argument 'sources': Object does not have a .read() method.
+Traceback (most recent call last):
+  File "C:\Users\Adham\AppData\Local\Temp\ipykernel_25848\1466779562.py", line 36, in pipeline
+    pp_df = pl.read_parquet(path_to_pp_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\io\parquet\functions.py", line 261, in read_parquet
+    lf = scan_parquet(
+         ^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\io\parquet\functions.py", line 629, in scan_parquet
+    pylf = PyLazyFrame.new_from_parquet(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument 'sources': Object does not have a .read() method.

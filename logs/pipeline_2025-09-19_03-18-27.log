@@ -1,0 +1,27 @@
+2025-09-19 03:18:27,336 - INFO - Loading data...
+2025-09-19 03:18:27,441 - INFO - Data loaded successfully
+2025-09-19 03:18:27,443 - INFO - Running pipeline ...
+2025-09-19 03:18:27,501 - ERROR - Pipeline failed: cannot create expression literal for value of type LazyFrame.
+
+Hint: Pass `allow_object=True` to accept any value and create a literal of type Object.
+Traceback (most recent call last):
+  File "C:\Users\Adham\AppData\Local\Temp\ipykernel_16292\3333343879.py", line 45, in pipeline
+    pp_df.with_columns(
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\lazyframe\frame.py", line 5823, in with_columns
+    pyexprs = parse_into_list_of_expressions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\parse\expr.py", line 101, in parse_into_list_of_expressions
+    exprs = _parse_positional_inputs(inputs, structify=__structify)  # type: ignore[arg-type]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\parse\expr.py", line 158, in _parse_positional_inputs
+    return [parse_into_expression(e, structify=structify) for e in inputs_iter]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\_utils\parse\expr.py", line 62, in parse_into_expression
+    expr = F.lit(input, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Adham\anaconda3\envs\data_analytics\Lib\site-packages\polars\functions\lit.py", line 211, in lit
+    return wrap_expr(plr.lit(item, allow_object, is_scalar=True))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot create expression literal for value of type LazyFrame.
+
+Hint: Pass `allow_object=True` to accept any value and create a literal of type Object.

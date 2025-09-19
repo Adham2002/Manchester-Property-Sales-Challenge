@@ -1,0 +1,9 @@
+2025-09-19 03:19:46,825 - INFO - Loading data...
+2025-09-19 03:19:46,833 - INFO - Data loaded successfully
+2025-09-19 03:19:46,834 - INFO - Running pipeline ...
+2025-09-19 03:19:46,836 - ERROR - Pipeline failed: clean_category() missing 1 required positional argument: 'colm'
+Traceback (most recent call last):
+  File "C:\Users\Adham\AppData\Local\Temp\ipykernel_16292\3644898839.py", line 46, in pipeline
+    clean_category(['F', 'S', 'D', 'T', 'O'], 'property_type'),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: clean_category() missing 1 required positional argument: 'colm'

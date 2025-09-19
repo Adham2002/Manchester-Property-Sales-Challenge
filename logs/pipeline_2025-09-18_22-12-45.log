@@ -1,0 +1,9 @@
+2025-09-18 22:12:45,098 - INFO - Pipeline started
+2025-09-18 22:12:45,100 - INFO - Loading data...
+2025-09-18 22:12:45,106 - INFO - Data loaded successfully
+2025-09-18 22:12:45,107 - ERROR - Pipeline failed: 'ExprStringNameSpace' object has no attribute 'str'
+Traceback (most recent call last):
+  File "C:\Users\Adham\AppData\Local\Temp\ipykernel_16292\2512398367.py", line 54, in pipeline
+    pl.col('postcode').str.split(' ').list.get(1).str.str.len_chars()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ExprStringNameSpace' object has no attribute 'str'
